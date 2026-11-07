@@ -1,0 +1,6 @@
+node_modules/
+.next/
+out/
+legacy-static/
+.DS_Store
+npm-debug.log*
