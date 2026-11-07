@@ -29,7 +29,7 @@ export const metadata: Metadata = {
       "Perth's trusted supplier and installer of fingerprint, PIN, card and app-enabled digital door locks for homes, businesses and strata.",
     url: SITE_URL,
     type: "website",
-    images: ["https://digitaldoorlocksperth.com.au/wp-content/uploads/2025/09/22-1.jpg"],
+    images: ["/assets/images/digital-lock-hero.webp"],
   },
   twitter: {
     card: "summary_large_image",

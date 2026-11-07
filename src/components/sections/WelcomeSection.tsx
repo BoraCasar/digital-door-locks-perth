@@ -1,12 +1,13 @@
 import { Button } from "@/components/ui/Button";
+import { ContentImage } from "@/components/ui/ContentImage";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { PHONE_DISPLAY, PHONE_HREF } from "@/data/site";
 
 export function WelcomeSection() {
   return (
     <section className="section" id="welcome">
-      <div className="container intro-block">
-        <div className="intro-block__content">
+      <div className="container editorial-split">
+        <div className="editorial-split__content">
           <SectionHeading
             eyebrow="Welcome"
             title="Welcome to Digital Door Locks Perth"
@@ -22,13 +23,22 @@ export function WelcomeSection() {
             is secure, compliant with safety standards, and backed by expert support.
           </p>
         </div>
-        <div className="quote-panel">
-          <h3>Free, No Obligation Quotes</h3>
-          <p>
-            At Digital Door Locks Perth, we believe in transparent pricing and great service from the start. That&apos;s why we offer
-            free, no obligation quotes on all our digital door lock installations and locksmith services.
-          </p>
-          <Button href={PHONE_HREF}>Request Your Free Quote</Button>
+        <div className="editorial-split__aside">
+          <ContentImage
+            src="/assets/images/digital-lock-round.webp"
+            alt="Lionhead digital door lock with round keypad on a Perth front entry door"
+            width={640}
+            height={480}
+            className="editorial-split__image"
+          />
+          <div className="quote-panel">
+            <h3>Free, No Obligation Quotes</h3>
+            <p>
+              At Digital Door Locks Perth, we believe in transparent pricing and great service from the start. That&apos;s why we
+              offer free, no obligation quotes on all our digital door lock installations and locksmith services.
+            </p>
+            <Button href={PHONE_HREF}>Request Your Free Quote</Button>
+          </div>
         </div>
       </div>
     </section>

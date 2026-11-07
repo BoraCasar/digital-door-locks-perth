@@ -18,7 +18,7 @@ export function Header() {
       }
     };
 
-    const media = window.matchMedia("(min-width: 768px)");
+    const media = window.matchMedia("(min-width: 1024px)");
     const onMediaChange = () => {
       if (media.matches) {
         closeMenu();
@@ -37,8 +37,8 @@ export function Header() {
     <header className="site-header">
       <div className="container site-header__inner">
         <Link className="site-logo" href="/" aria-label="Digital Door Locks Perth — Home">
-          <Image src="/assets/images/logo.png" alt="Digital Door Locks Perth logo" width={160} height={42} priority />
-          <span>Digital Door Locks Perth</span>
+          <Image src="/assets/images/logo.png" alt="" width={160} height={42} priority />
+          <span className="site-logo__text">Digital Door Locks Perth</span>
         </Link>
 
         <nav className="site-nav" aria-label="Primary">

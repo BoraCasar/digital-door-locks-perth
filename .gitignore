@@ -4,3 +4,6 @@ out/
 legacy-static/
 .DS_Store
 npm-debug.log*
+.vercel
+.env*
+*.tsbuildinfo

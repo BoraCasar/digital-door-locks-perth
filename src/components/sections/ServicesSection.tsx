@@ -1,25 +1,25 @@
-import Image from "next/image";
+import { ContentImage } from "@/components/ui/ContentImage";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 
 const services = [
   {
     title: "Residential",
-    image: "/assets/images/residential.webp",
-    alt: "Residential digital lock installation in Perth",
+    image: "/assets/images/digital-lock-round.webp",
+    alt: "Residential digital lock installation on a Perth home entrance",
     bullets: ["Reliable Installation", "Wide Range Available", "Leading by Innovation!"],
     body: "Professionally installed smart locks for your home, ensuring the lock is fitted correctly for maximum security and seamless operation. We guarantee 100% satisfaction and the digital lock functions smoothly.",
   },
   {
     title: "Commercial",
-    image: "/assets/images/commercial.webp",
-    alt: "Commercial digital lock installation for Perth businesses",
+    image: "/assets/images/digital-lock-handle.webp",
+    alt: "Commercial digital lock with fingerprint reader installed in Perth",
     bullets: ["Expert Installation", "Extensive Selection", "Pioneering Smart Solutions"],
     body: "Professionally installed smart door locks for your business or shop front, ensuring the smart lock is fitted correctly for maximum security and ease of use. Our technician guarantees 100% satisfaction.",
   },
   {
     title: "Short-Stay & Airbnb",
-    image: "/assets/images/airbnb.webp",
-    alt: "Digital lock installation for short-stay and Airbnb properties",
+    image: "/assets/images/digital-lock-handle.webp",
+    alt: "Digital lock installation for short-stay and Airbnb properties in Perth",
     bullets: ["Dependable Installation", "Something for Everyone", "Redefining Security Through Innovation"],
     body: "Keyless access solutions ideal for short-stay accommodation — convenient guest access with secure, professionally installed digital locks for every entry point.",
   },
@@ -36,10 +36,10 @@ export function ServicesSection() {
           lead="Whether you're upgrading your home security or need a smart access solution for your business, our expert team is here to help you choose the right product and provide an accurate quote, free of charge, with no hidden fees."
         />
 
-        <div className="card-grid card-grid--3">
+        <div className="card-grid card-grid--3 service-columns">
           {services.map((service) => (
             <article className="service-card" key={service.title}>
-              <Image
+              <ContentImage
                 className="service-card__image"
                 src={service.image}
                 alt={service.alt}

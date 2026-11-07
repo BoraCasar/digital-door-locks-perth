@@ -7,7 +7,6 @@ export const primaryNav = [
   { href: "/locksmith-services/", label: "Locksmith Services" },
   { href: "/service-areas/", label: "Service Areas" },
   { href: "/faq/", label: "FAQ" },
-  { href: "/blog/", label: "Blog" },
   { href: "/contact-us/", label: "Contact" },
 ] as const;
 

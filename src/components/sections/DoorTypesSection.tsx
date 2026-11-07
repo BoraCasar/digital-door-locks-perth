@@ -3,7 +3,7 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 const doorTypes = [
   {
     title: "Pedestrian Gates",
-    body: "Digital locks can be installed on pedestrian gates in Perth providing secure, keyless entry to outdoor areas. Designed to withstand the elements, these digital locks are ideal for residential, commercial, or strata properties offering simplified but smart access.",
+    body: "Digital locks can be installed on pedestrian gates in Perth, providing secure, keyless entry to outdoor areas. Designed to withstand the elements, these digital locks are ideal for residential, commercial, or strata properties offering simplified but smart access.",
   },
   {
     title: "Security Screens",
