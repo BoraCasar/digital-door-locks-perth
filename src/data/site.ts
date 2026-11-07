@@ -3,6 +3,7 @@ export const PHONE_DISPLAY = "0413 320 222";
 export const PHONE_HREF = "tel:+61413320222";
 
 export const primaryNav = [
+  { href: "/", label: "Home" },
   { href: "/digital-locks/", label: "Digital Locks" },
   { href: "/locksmith-services/", label: "Locksmith Services" },
   { href: "/service-areas/", label: "Service Areas" },

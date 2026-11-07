@@ -10,7 +10,7 @@ export function Footer() {
       <div className="container site-footer__grid">
         <div>
           <Link className="site-logo" href="/" aria-label="Digital Door Locks Perth — Home">
-            <Image src="/assets/images/logo.png" alt="" width={160} height={42} />
+            <Image src="/assets/images/logo.png" alt="" width={305} height={80} />
           </Link>
           <p>Trade qualified locksmiths supplying and installing digital door locks across Perth, 24 hours a day, 7 days a week.</p>
         </div>

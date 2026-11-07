@@ -37,7 +37,7 @@ export function Header() {
     <header className="site-header">
       <div className="container site-header__inner">
         <Link className="site-logo" href="/" aria-label="Digital Door Locks Perth — Home">
-          <Image src="/assets/images/logo.png" alt="" width={160} height={42} priority />
+          <Image src="/assets/images/logo.png" alt="" width={305} height={80} priority />
           <span className="site-logo__text">Digital Door Locks Perth</span>
         </Link>
 

@@ -29,8 +29,8 @@ export function Hero() {
           <ContentImage
             src="/assets/images/digital-lock-hero.webp"
             alt="Lionhead smart digital door lock installed on a Perth home entrance"
-            width={720}
-            height={900}
+            width={800}
+            height={600}
             priority
             className="hero__image"
             sizes="(min-width: 900px) 44vw, 100vw"
