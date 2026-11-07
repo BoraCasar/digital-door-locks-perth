@@ -36,7 +36,7 @@ if [[ -z "${VERCEL_TOKEN:-}" ]]; then
   echo "After VERCEL_TOKEN is set, every push to main runs .github/workflows/deploy-production.yml"
   echo "and updates https://digital-door-locks-perth.vercel.app"
 else
-  gh secret set VERCEL_TOKEN --body "$VERCEL_TOKEN"
+  gh secret set VERCEL_TOKEN --body "$VERCEL_TOKEN" -R BoraCasar/digital-door-locks-perth
   echo "VERCEL_TOKEN secret updated on GitHub."
 fi
 
