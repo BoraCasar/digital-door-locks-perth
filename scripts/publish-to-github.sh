@@ -1,10 +1,12 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-export PATH="$HOME/.local/bin:$HOME/.local/node/bin:$PATH"
-
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 cd "$ROOT"
+
+export PATH="$ROOT/node_modules/dugite/git/bin:$HOME/.local/bin:$HOME/.local/node/bin:$PATH"
+export GIT_EXEC_PATH="$ROOT/node_modules/dugite/git/libexec/git-core"
+export GIT_TEMPLATE_DIR="$ROOT/node_modules/dugite/git/share/git-core/templates"
 
 if ! gh auth status >/dev/null 2>&1; then
   echo "GitHub CLI is not signed in. Run: gh auth login"
@@ -31,6 +33,11 @@ if ! GIT remote get-url origin >/dev/null 2>&1; then
   gh repo create digital-door-locks-perth --public --source=. --remote=origin --description "Next.js website for Digital Door Locks Perth"
 fi
 
+gh auth setup-git 2>/dev/null || true
+
 GIT push -u origin main
 
-echo "Repository published. Open with: gh repo view --web"
+echo "Repository published: $(git remote get-url origin)"
+echo "Open with: gh repo view --web"
+echo ""
+echo "Next: ./scripts/setup-vercel-deploy.sh  (add VERCEL_TOKEN for auto-deploy on push to main)"

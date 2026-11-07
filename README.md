@@ -61,6 +61,25 @@ gh auth login
 ./scripts/publish-to-github.sh
 ```
 
-This creates a public repo named `digital-door-locks-perth` under your GitHub account and pushes `main`.
+This creates a public repo named `digital-door-locks-perth` under your GitHub account and pushes `main`. The script uses the bundled Git from `dugite`, so Xcode Command Line Tools are optional.
 
-If macOS prompts you to install Xcode Command Line Tools for system `git`, you can either run `xcode-select --install` or rely on the bundled Git from the `dugite` dev dependency (used by the script).
+## Auto-deploy to Vercel on push to `main`
+
+The project is linked locally to Vercel (`digital-door-locks-perth` on team **digital-door-locls**).
+
+1. **Publish the repo** (once): `./scripts/publish-to-github.sh`  
+   Remote: [github.com/BoraCasar/digital-door-locks-perth](https://github.com/BoraCasar/digital-door-locks-perth)
+
+2. **Enable GitHub Actions deploy** (once):
+   ```bash
+   ./scripts/setup-vercel-deploy.sh
+   ```
+   Create a token at [Vercel → Account → Tokens](https://vercel.com/account/settings/tokens), then run `gh secret set VERCEL_TOKEN` when prompted.
+
+3. **Day to day**: commit and push to `main` — the workflow `.github/workflows/deploy-production.yml` builds and deploys to production ([digital-door-locks-perth.vercel.app](https://digital-door-locks-perth.vercel.app)).
+
+**Optional:** For Vercel’s built-in Git integration (PR previews, deploy logs on commits), connect GitHub under [Vercel login connections](https://vercel.com/account/login-connections), then run:
+
+```bash
+vercel git connect --scope digital-door-locls -y
+```
