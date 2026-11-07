@@ -51,3 +51,16 @@ public/assets/   images and brand logos
 ```
 
 See `MIGRATION.md` for URL and SEO notes when replacing the WordPress site.
+
+## Publish to GitHub
+
+`gh` is installed at `~/.local/bin/gh`. Sign in once, then run the publish script:
+
+```bash
+gh auth login
+./scripts/publish-to-github.sh
+```
+
+This creates a public repo named `digital-door-locks-perth` under your GitHub account and pushes `main`.
+
+If macOS prompts you to install Xcode Command Line Tools for system `git`, you can either run `xcode-select --install` or rely on the bundled Git from the `dugite` dev dependency (used by the script).
